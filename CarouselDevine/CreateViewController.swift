@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  CreateViewController.swift
 //  CarouselDevine
 //
 //  Created by WilliamDevine on 9/21/14.
@@ -8,25 +8,27 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
-    @IBOutlet weak var settingScrollView: UIScrollView!
-    @IBOutlet weak var settingsImage: UIImageView!
-    
+class CreateViewController: UIViewController {
+    @IBOutlet weak var termsButton: UIButton!
+    @IBOutlet weak var checkBox: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        settingScrollView.contentSize = settingsImage.frame.size
         
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func onTapCheckBox(sender: AnyObject) {
+        checkBox.selected = !checkBox.selected
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func onDismiss(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    
+    @IBAction func onBackButton(sender: AnyObject) {
+       navigationController?.popToRootViewControllerAnimated(true)
     }
 
     /*

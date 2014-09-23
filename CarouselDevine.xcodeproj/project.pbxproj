@@ -18,6 +18,8 @@
 		6576D98319CF702D007DB566 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576D98219CF702D007DB566 /* WelcomeViewController.swift */; };
 		6576D98519CF7DDB007DB566 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576D98419CF7DDB007DB566 /* ConversationsViewController.swift */; };
 		6576D98719CF7E6A007DB566 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576D98619CF7E6A007DB566 /* SettingsViewController.swift */; };
+		6576D98919CFC596007DB566 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576D98819CFC596007DB566 /* CreateViewController.swift */; };
+		6576D98B19CFCCA1007DB566 /* TermsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576D98A19CFCCA1007DB566 /* TermsWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		6576D98219CF702D007DB566 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = ../WelcomeViewController.swift; sourceTree = "<group>"; };
 		6576D98419CF7DDB007DB566 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		6576D98619CF7E6A007DB566 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6576D98819CFC596007DB566 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		6576D98A19CFCCA1007DB566 /* TermsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				6576D95E19CE9061007DB566 /* AppDelegate.swift */,
 				6576D96019CE9061007DB566 /* ViewController.swift */,
 				6576D96219CE9061007DB566 /* Main.storyboard */,
+				6576D98A19CFCCA1007DB566 /* TermsWebViewController.swift */,
+				6576D98819CFC596007DB566 /* CreateViewController.swift */,
 				6576D98619CF7E6A007DB566 /* SettingsViewController.swift */,
 				6576D98419CF7DDB007DB566 /* ConversationsViewController.swift */,
 				6576D98019CE9304007DB566 /* SignInViewController.swift */,
@@ -227,12 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6576D98919CFC596007DB566 /* CreateViewController.swift in Sources */,
 				6576D98119CE9304007DB566 /* SignInViewController.swift in Sources */,
 				6576D98319CF702D007DB566 /* WelcomeViewController.swift in Sources */,
 				6576D98719CF7E6A007DB566 /* SettingsViewController.swift in Sources */,
 				6576D97F19CE90D6007DB566 /* IntroViewController.swift in Sources */,
 				6576D98519CF7DDB007DB566 /* ConversationsViewController.swift in Sources */,
 				6576D96119CE9061007DB566 /* ViewController.swift in Sources */,
+				6576D98B19CFCCA1007DB566 /* TermsWebViewController.swift in Sources */,
 				6576D95F19CE9061007DB566 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
