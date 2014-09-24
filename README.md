@@ -3,7 +3,7 @@ Hours Spent: 10
 
 
 
-
+![alt tag](CarouselHW.gif)
 
 All items listed below were completed: 
 
