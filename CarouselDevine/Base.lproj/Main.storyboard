@@ -9,15 +9,15 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="IntroViewController" customModule="CarouselDevine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1138"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" id="UGV-9T-qzX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1138"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro" id="NlT-AK-TgD">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1738"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6NI-nA-WCc">
@@ -71,10 +71,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="stL-hf-pDZ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1138"/>
+                    <size key="freeformSize" width="320" height="1000"/>
                     <connections>
                         <outlet property="introImage" destination="NlT-AK-TgD" id="jFp-4N-eZ2"/>
                         <outlet property="introScrollView" destination="UGV-9T-qzX" id="XK0-y7-Oip"/>
+                        <outlet property="tile1View" destination="gw8-h0-QrW" id="FUB-01-sYf"/>
+                        <outlet property="tile2View" destination="gP8-WD-k6E" id="Ti1-Of-VaD"/>
+                        <outlet property="tile3View" destination="RdV-O0-jdF" id="J4c-vE-am5"/>
+                        <outlet property="tile4View" destination="fdh-lV-yZt" id="VcS-UD-sDx"/>
+                        <outlet property="tile5View" destination="yR1-88-kvh" id="xcp-it-Khe"/>
+                        <outlet property="tile6View" destination="Ywm-tf-3NY" id="SOH-lF-qEl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -239,7 +245,7 @@
             <objects>
                 <viewController id="DN8-TJ-qxz" customClass="SignInViewController" customModule="CarouselDevine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Rr-fQ-nSX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1138"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_nav" id="ANI-RF-4hn">
