@@ -72,7 +72,7 @@ class SignInViewController: UIViewController {
             delay(1.5, closure: { () -> () in signInAlertView.dismissWithClickedButtonIndex(0, animated: true)
                 
                 
-        if (self.emailTextField.text == "bill@gmail.com") && (self.passwordTextField.text == "123") {
+        if (self.emailTextField.text == "b@g.com") && (self.passwordTextField.text == "123") {
                     self.performSegueWithIdentifier("signInViewSegue", sender: self)
         } else {
             var alertView = UIAlertView(title: "Sign in failed", message: "Wrong email or password", delegate: self, cancelButtonTitle: "OK")
