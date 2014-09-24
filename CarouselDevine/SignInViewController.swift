@@ -14,10 +14,45 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var createTextImage: UIImageView!
+    @IBOutlet weak var fieldsView: UIView!
+    
     
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
+    
+
+    func keyboardWillShow(notification: NSNotification!) {
+        println("keyboardwillshow")
+        
+        var userInfo = notification.userInfo!
+        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue().size
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
+        var animationDuration = durationValue.doubleValue
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
+        var animationCurve = curveValue.integerValue
+        
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!,animations: {
+            self.fieldsView.frame.origin.y = self.view.frame.size.height - kbSize.height - self.fieldsView.frame.size.height}, completion: nil)
+        
+        
+    }
+    
+    
+    func keyboardWillHide(notification: NSNotification!) {
+        println("bye")
+        var userInfo = notification.userInfo!
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
+        var animationDuration = durationValue.doubleValue
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
+        var animationCurve = curveValue.integerValue
+        
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!,animations: {
+            self.fieldsView.frame.origin.y = 134}, completion: nil)
+        
+    }
+
     
     @IBAction func onSignInButton(sender: AnyObject) {
         
@@ -34,7 +69,7 @@ class SignInViewController: UIViewController {
             delay(1.5, closure: { () -> () in signInAlertView.dismissWithClickedButtonIndex(0, animated: true)
                 
                 
-        if (self.emailTextField.text == "bill@gmail.com") && (self.passwordTextField.text == "password") {
+        if (self.emailTextField.text == "bill@gmail.com") && (self.passwordTextField.text == "123") {
                     self.performSegueWithIdentifier("signInViewSegue", sender: self)
         } else {
             var alertView = UIAlertView(title: "Sign in failed", message: "Wrong email or password", delegate: self, cancelButtonTitle: "OK")
@@ -48,12 +83,10 @@ class SignInViewController: UIViewController {
         override func viewDidLoad() {
         super.viewDidLoad()
 
-        scrollView.contentSize = CGSize(width: 320, height: 300)
-
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         // Do any additional setup after loading the view.
     }
-
-   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

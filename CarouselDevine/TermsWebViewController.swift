@@ -11,9 +11,9 @@ import WebKit
 
 class TermsWebViewController: UIViewController {
     
-    @IBOutlet weak var termsWebView: UIWebView! = nil
+    @IBOutlet weak var termsWebView: UIWebView!
 
-   	let url = "https://www.dropbox.com/terms?mobile=1"
+    let url = "https://www.dropbox.com/terms?mobile=1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,5 +29,8 @@ class TermsWebViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onClose(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
 }
