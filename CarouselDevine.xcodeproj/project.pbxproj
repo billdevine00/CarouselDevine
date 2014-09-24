@@ -97,9 +97,9 @@
 				6576D96219CE9061007DB566 /* Main.storyboard */,
 				6576D98A19CFCCA1007DB566 /* TermsWebViewController.swift */,
 				6576D98819CFC596007DB566 /* CreateViewController.swift */,
+				6576D98019CE9304007DB566 /* SignInViewController.swift */,
 				6576D98619CF7E6A007DB566 /* SettingsViewController.swift */,
 				6576D98419CF7DDB007DB566 /* ConversationsViewController.swift */,
-				6576D98019CE9304007DB566 /* SignInViewController.swift */,
 				6576D97E19CE90D6007DB566 /* IntroViewController.swift */,
 				6576D96519CE9061007DB566 /* Images.xcassets */,
 				6576D96719CE9061007DB566 /* LaunchScreen.xib */,
@@ -435,6 +435,7 @@
 				6576D97A19CE9062007DB566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6576D97B19CE9062007DB566 /* Build configuration list for PBXNativeTarget "CarouselDevineTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +444,7 @@
 				6576D97D19CE9062007DB566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

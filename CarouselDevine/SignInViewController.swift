@@ -13,9 +13,10 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var createTextImage: UIImageView!
     @IBOutlet weak var fieldsView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var signInButtonView: UIView!
     
     
     @IBAction func onTap(sender: AnyObject) {
@@ -32,16 +33,17 @@ class SignInViewController: UIViewController {
         var animationDuration = durationValue.doubleValue
         var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
         var animationCurve = curveValue.integerValue
-        
+//        
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!,animations: {
-            self.fieldsView.frame.origin.y = self.view.frame.size.height - kbSize.height - self.fieldsView.frame.size.height}, completion: nil)
+            self.scrollView.contentOffset.y = 110
+            self.signInButtonView.center.y = 270}, completion: nil)
         
         
     }
     
     
     func keyboardWillHide(notification: NSNotification!) {
-        println("bye")
+        println("keyboardhidden")
         var userInfo = notification.userInfo!
         var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
         var animationDuration = durationValue.doubleValue
@@ -49,7 +51,8 @@ class SignInViewController: UIViewController {
         var animationCurve = curveValue.integerValue
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!,animations: {
-            self.fieldsView.frame.origin.y = 134}, completion: nil)
+            self.scrollView.contentOffset.y = 0
+            self.signInButtonView.center.y = 408}, completion: nil)
         
     }
 
@@ -83,6 +86,8 @@ class SignInViewController: UIViewController {
         override func viewDidLoad() {
         super.viewDidLoad()
 
+            scrollView.contentSize = CGSizeMake(320, 300)
+            
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         // Do any additional setup after loading the view.
